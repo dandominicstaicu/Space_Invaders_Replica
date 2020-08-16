@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class alienBullets : MonoBehaviour
 {
@@ -34,6 +35,13 @@ public class alienBullets : MonoBehaviour
             Destroy(gameObject);
 
             DestroyObject(col.gameObject, 0.5f);
+
+            IEnumerator WaitForDeath()
+            {
+                yield return new WaitForSeconds(3);
+            }
+            SceneManager.LoadScene("DeathMenu");
+
         }
 
         if (col.tag == "Shield")
