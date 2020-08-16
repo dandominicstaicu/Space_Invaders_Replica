@@ -19,9 +19,11 @@ public class Spaceship : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("SpaceShipShoot"))
         {
             Instantiate(theBullet, transform.position, Quaternion.identity);
+
+            soundManager.Instance.playOneShot(soundManager.Instance.BulletFire);
         }
     }
 }
