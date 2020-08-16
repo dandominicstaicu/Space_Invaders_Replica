@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A14FC9D1-8CBE-B303-A0A0-F159AF065CA5}</ProjectGuid>
+    <ProjectGuid>{A8BBBDB6-3A91-E221-B277-747E32FB1FA8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -52,11 +52,11 @@
     <UnityVersion>2020.1.2f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Alien.cs" />
-    <Compile Include="Assets\Scripts\alienBullets.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
-    <Compile Include="Assets\Scripts\Spaceship.cs" />
+    <Compile Include="Assets\Scripts\Alien.cs" />
     <Compile Include="Assets\Scripts\soundManager.cs" />
+    <Compile Include="Assets\Scripts\Spaceship.cs" />
+    <Compile Include="Assets\Scripts\alienBullets.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

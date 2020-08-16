@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public float speed = 30;
+
+    private Rigidbody2D rigidBody;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigidBody = GetComponent<Rigidbody2D>();
+
+        rigidBody.velocity = Vector2.up * speed; 
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D col)
     {
-        
+        if(col.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
+    }
+    void OnBecomeInvisible()
+    {
+        Destroy(gameObject);
     }
 }
