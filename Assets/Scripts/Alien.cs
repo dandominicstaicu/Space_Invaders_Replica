@@ -23,17 +23,20 @@ public class Alien : MonoBehaviour
 
     public Sprite explodedShipImage;
 
+    float sceneTime;
+
     void Start()
     {
-
         rigidBody = GetComponent<Rigidbody2D>();
 
         rigidBody.velocity = new Vector2(1, 0) * speed;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
 
+        sceneTime = 0.0f;
+
         StartCoroutine(ChangeAlienSprite());
-        
+
         baseFireWaitTime = baseFireWaitTime + Random.Range(minFireRateTime, maxFireRateTime);
 
     }
@@ -96,18 +99,16 @@ public class Alien : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        if (Time.time > baseFireWaitTime)
+        sceneTime += Time.fixedDeltaTime;
+        if (sceneTime > baseFireWaitTime)
         {
-            baseFireWaitTime = baseFireWaitTime +
-                Random.Range(minFireRateTime, maxFireRateTime);
+            baseFireWaitTime += Random.Range(minFireRateTime, maxFireRateTime);
 
             Instantiate(alienBullet, transform.position, Quaternion.identity);
         }
-
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+        void OnTriggerEnter2D(Collider2D col)
     {
 
         if (col.gameObject.tag == "Player")
