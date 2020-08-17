@@ -13,7 +13,7 @@ public class alienBullets : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         rigidBody = GetComponent<Rigidbody2D>();
 
         rigidBody.velocity = Vector2.down * speed;
@@ -36,12 +36,7 @@ public class alienBullets : MonoBehaviour
 
             DestroyObject(col.gameObject, 0.5f);
 
-            IEnumerator WaitForDeath()
-            {
-                yield return new WaitForSeconds(3);
-            }
-            SceneManager.LoadScene("DeathMenu");
-
+            SceneManager.LoadScene(2);
         }
 
         if (col.tag == "Shield")

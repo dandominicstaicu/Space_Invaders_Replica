@@ -32,10 +32,9 @@ public class Alien : MonoBehaviour
 
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        StartCoroutine(changeAlienSprite());
+        StartCoroutine(ChangeAlienSprite());
         
-        baseFireWaitTime = baseFireWaitTime +
-            Random.Range(minFireRateTime, maxFireRateTime);
+        baseFireWaitTime = baseFireWaitTime + Random.Range(minFireRateTime, maxFireRateTime);
 
     }
 
@@ -76,7 +75,7 @@ public class Alien : MonoBehaviour
 
     }
 
-    public IEnumerator changeAlienSprite()
+    public IEnumerator ChangeAlienSprite()
     {
         while (true)
         {

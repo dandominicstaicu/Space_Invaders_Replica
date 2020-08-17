@@ -7,7 +7,9 @@ public class DeathMenu : MonoBehaviour
 {
     public void Respawn()
     {
-        SceneManager.LoadScene("Main_Scene");
+        Scene activeScene = SceneManager.GetActiveScene();
+       // Debug.Log(SceneManager.GetActiveScene);
+        SceneManager.LoadScene(1);
     }
 
     public void Quit()
