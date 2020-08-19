@@ -8,22 +8,50 @@ public class TouchControls : MonoBehaviour
 
     public GameObject theBullet;
 
-    public Rigidbody2D Rigidbody;
+    Rigidbody2D rb2D;
 
+    private bool left = false;
+    private bool right = false;
 
-    public void Left()
+    private void Start()
     {
-        float horzMove = -1;
-        Rigidbody.velocity = new Vector2(horzMove, 0) * speed;
+        rb2D = GetComponent<Rigidbody2D>();
     }
 
-    public void Right()
+    private void FixedUpdate()
     {
-        float horzMove = 1;
-        Rigidbody.velocity = new Vector2(horzMove, 0) * speed;
+        if(left == true)
+            rb2D.velocity = new Vector2(-10, 0) * speed;
+        else
+            rb2D.velocity = new Vector2(-1, 0) * 0;
+
+        if (right == true)
+            rb2D.velocity = new Vector2(1, 0) * speed;
+        else
+            rb2D.velocity = new Vector2(1, 0) * 0;
     }
 
-    public void Fire()
+    public void MoveRight()
+    {
+        right = true;
+    }
+
+    public void StopMoveRight()
+    {
+        right = false;
+    }
+
+    public void MoveLeft()
+    {
+        left = true;
+    }
+
+    public void StopMoveLeft()
+    {
+        left = false;
+    }
+
+    public void Shoot()
     {
         Instantiate(theBullet, transform.position, Quaternion.identity);
 
