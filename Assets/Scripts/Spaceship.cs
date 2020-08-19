@@ -10,7 +10,6 @@ public class Spaceship : MonoBehaviour
 
     void FixedUpdate()
     {
-      //  Time.timeScale = 1f;
         float horzMove = Input.GetAxisRaw("Horizontal");
 
         GetComponent<Rigidbody2D>().velocity = new Vector2(horzMove, 0) * speed; 
