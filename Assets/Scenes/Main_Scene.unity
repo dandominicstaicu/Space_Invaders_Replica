@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AlienBuzz1: {fileID: 8300000, guid: 7a54735100b49cb418de61323cc174a6, type: 3}
-  AlienBuzz2: {fileID: 8300000, guid: ed37fe9840300f34a8867bac16788760, type: 3}
+  AlienBuzz2: {fileID: 8300000, guid: 146c4098ec7722943942467547bf9164, type: 3}
   AlienDies: {fileID: 8300000, guid: f715a4f385164e449a88a72154364786, type: 3}
   BulletFire: {fileID: 8300000, guid: 3a6fcd89d20fc8c4da986ae30c432514, type: 3}
   ShipExplosion: {fileID: 8300000, guid: b67989a6290379240a83d5ad9762449c, type: 3}
@@ -1646,7 +1646,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 596570510}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: TouchControls, Assembly-CSharp
           m_MethodName: MoveRight
           m_Mode: 1
@@ -1662,7 +1662,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 596570510}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: TouchControls, Assembly-CSharp
           m_MethodName: StopMoveRight
           m_Mode: 1
@@ -1980,7 +1980,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 596570508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24ab33f781d495d46bb02fa489563a06, type: 3}
+  m_Script: {fileID: 11500000, guid: a27617e5680ce7647bf60a6ebf45f7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
@@ -2457,7 +2457,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 596570510}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: TouchControls, Assembly-CSharp
           m_MethodName: MoveLeft
           m_Mode: 1
@@ -2473,7 +2473,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 596570510}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: TouchControls, Assembly-CSharp
           m_MethodName: StopMoveLeft
           m_Mode: 1
@@ -4293,7 +4293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1322822443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4752,7 +4752,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 596570510}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TouchControls, Assembly-CSharp
         m_MethodName: Shoot
         m_Mode: 1
